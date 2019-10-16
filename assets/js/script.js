@@ -1,9 +1,11 @@
-const toogle = document.querySelectorAll(".toogle_flip");
-toogle.forEach(button => {
-  button.addEventListener('click', () => {
-    document.querySelector("#main").classList.toggle("flip");
-  });
-});
+const main = document.querySelector('#main');
+main.addEventListener('click', (e) => {
+  const {target} = e;
+  if (target.classList.contains('toogle_flip')) {
+    main.classList.toggle("flip");
+  };
+})
+
 const faded = document.querySelector('.terms_and_conditions');
 faded.addEventListener('scroll', (event) => {
   const { target } = event;
